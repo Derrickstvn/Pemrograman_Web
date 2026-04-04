@@ -1,61 +1,59 @@
-table {
+table.box {
     border-collapse: collapse;
-}
-
-td {
-    padding: 10px;
-}
-
-.box {
     position: relative;
     display: inline-block;
 }
 
-.box img {
-    width: 150px;
+table.box td {
+    padding: 0; 
 }
 
-.box::before,
-.box::after,
-.box span::before,
-.box span::after {
+table.box img {
+    width: 150px;
+    display: block; 
+}
+
+table.box::before,
+table.box::after,
+table.box td::before,
+table.box td::after {
     content: "";
     position: absolute;
     width: 20px;
     height: 20px;
 }
 
-.box::before {
+table.box::before {
     top: 0;
     left: 0;
     border-top: 5px solid red;
     border-left: 5px solid red;
 }
 
-.box::after {
+table.box::after {
     top: 0;
     right: 0;
     border-top: 5px solid red;
     border-right: 5px solid red;
 }
 
-.box span::before {
+table.box td::before {
     bottom: 0;
     left: 0;
     border-bottom: 5px solid red;
     border-left: 5px solid red;
 }
 
-.box span::after {
+table.box td::after {
     bottom: 0;
     right: 0;
     border-bottom: 5px solid red;
     border-right: 5px solid red;
 }
 
-.box:hover::before,
-.box:hover::after,
-.box:hover span::before,
-.box:hover span::after {
+table.box:hover::before,
+table.box:hover::after,
+table.box:hover td::before,
+table.box:hover td::after {
     border-color: magenta;
 }
