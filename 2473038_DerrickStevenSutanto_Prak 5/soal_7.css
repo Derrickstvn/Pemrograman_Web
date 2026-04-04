@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    /* Agar padding tidak merusak ukuran width */
+}
+
+.container {
+    width: 620px;
+    margin: auto;
+}
+
+.atas {
+    display: flex;
+    height: 100px;
+}
+
+.logo {
+    width: 120px;
+    background-image: url(src/logo_zoo.png);
+    /* Pastikan path gambar benar */
+    background-size: cover;
+}
+
+.banner {
+    flex-grow: 1;
+    /* Membuat banner mengisi sisa ruang tengah otomatis */
+    background: yellow;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.atas-img {
+    width: 160px;
+    background-image: url(src/lion.png);
+    /* Pastikan path gambar benar */
+    background-size: cover;
+}
+
+.content {
+    display: flex;
+}
+
+.menu-kiri {
+    width: 120px;
+    flex-shrink: 0;
+    background-image: url(src/bg_sea.png);
+    /* Pastikan path gambar benar */
+    background-size: cover;
+    padding-top: 10px;
+}
+
+.menu {
+    color: white;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.main {
+    flex-grow: 1;
+    padding: 0px;
+    color: #4169E1;
+}
+
+.main h2 {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.elephant-wrapper {
+    float: right;
+    width: 190px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.gambar-kanan {
+    width: 200px;
+    height: 150px;
+    background-image: url(src/elephant.png);
+    /* Pastikan path gambar benar */
+    background-size: cover;
+    background-position: center;
+}
+
+.caption {
+    width: 200px;
+    background-color: #4169E1;
+    /* Warna biru mengikuti soal */
+    color: white;
+    font-size: 12px;
+    padding: 8px;
+    text-align: center;
+}
+
+.main p {
+    text-align: justify;
+    margin-top: 0;
+}
+
+.bawah {
+    width: 500px;
+    text-align: right;
+    float: right;
+    color: black;
+    background-color: rgb(94, 94, 254);
+}
