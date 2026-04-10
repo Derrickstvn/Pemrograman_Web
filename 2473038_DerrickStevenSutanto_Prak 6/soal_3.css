@@ -1,0 +1,13 @@
+table {
+    height: 600px;
+    width: 800px;
+    margin-top: 20px;
+}
+
+td {
+    border: 1px solid white;
+}
+
+.td-piramid {
+    background-color: rgb(255, 166, 0);
+}
