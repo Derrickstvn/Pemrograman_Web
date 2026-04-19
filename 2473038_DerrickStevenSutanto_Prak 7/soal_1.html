@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2473038 - Derrick Steven Sutanto</title>
+    <link rel="stylesheet" href="soal_1.css">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td><label for="judul">Judul</label></td>
+            <td>:</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td><label for="">Deskripsi</label></td>
+            <td>:</td>
+            <td>
+               <textarea id="deskripsi" maxlength="256" onkeyup="call_onKeyPress(this)"></textarea><br>
+                <div class="wrap-penghitung">
+                    <input class="penghitung" id="txt2" value="0/256" readonly>
+                </div>
+            </td>
+
+        </tr>
+    </table>
+
+    <script src="soal_1.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+table {
+    border-collapse: collapse;
+    width: 350px;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+}
+
+th,
+td {
+    border: 1px solid white;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #99B299;
+    color: black;
+}
+
+tr.baris-biru {
+    background-color: #99C2FF;
+}
+
+tr.baris-oranye {
+    background-color: #FFC299;
+}
+
+.highlight {
+    background-color: #CCFFAA !important;
+}
