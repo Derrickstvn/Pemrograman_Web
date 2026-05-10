@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2473038 - Derrick Steven Sutanto</title>
+
+    <script src="jquery-4.0.0.min.js"></script>
+
+    <style>
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu {
+            display: flex;
+            gap: 10px;
+        }
+
+        .menu>li {
+            background: deeppink;
+            color: white;
+            width: 150px;
+            padding: 10px;
+            position: relative;
+            text-decoration: underline;
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: -0;
+            width: 165px;
+            background: white;
+            border: 2px solid deeppink;
+            color: black;
+            text-decoration: underline;
+        }
+
+        .submenu li {
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="menu">
+        <li>
+            jQuery
+            <ul class="submenu">
+                <li>Download</li>
+                <li>Documentation</li>
+                <li>Blog</li>
+            </ul>
+        </li>
+
+        <li>
+            Community
+            <ul class="submenu">
+                <li>Mailing List</li>
+                <li>Tutorials</li>
+                <li>Demos</li>
+                <li>Plugins</li>
+            </ul>
+        </li>
+
+        <li>
+            Development
+            <ul class="submenu">
+                <li>Source Code</li>
+                <li>Bug Tracking</li>
+                <li>Recent Changes</li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+        $(document).ready(function () {
+
+            $("li .submenu").hide(); 
+
+            $(".menu > li").hover(
+                function () {
+                    $(this).children(".submenu").show(); 
+                },
+                function () {
+                    $(this).children(".submenu").hide(); 
+                }
+            );
+
+        });
+    </script>
+
+</body>
+
+</html>

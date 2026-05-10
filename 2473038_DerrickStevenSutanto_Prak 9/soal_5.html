@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2473038 - Derrick Steven Sutanto</title>
+    <script src="jquery-4.0.0.min.js"></script>
+
+    <style>
+        .merah {
+            color: red;
+        }
+
+        input {
+            width: 220px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="text" id="cari">
+
+    <p>Sun Microsystem</p>
+    <p>Apache Software Foundation</p>
+    <p>Oracle Coorporation</p>
+    <p>International Bussiness Machines</p>
+    <p>Microsoft Coorporation</p>
+    <p>Apple Inc</p>
+    <p>Sap Ag</p>
+    <p>Accenture</p>
+    <p>Computer Sciences Coorporation</p>
+    <p>Google</p>
+    <p>Softbank</p>
+    <p>Yahoo</p>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#cari").keyup(function () {
+                let keyword = $(this).val().toLowerCase();
+
+                $("p").removeClass("merah");
+
+                $("p").each(function () {
+                    let text = $(this).text().toLowerCase();
+
+                    if (text.includes(keyword) && keyword != "") {
+                        $(this).addClass("merah");
+                    }
+                });
+
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

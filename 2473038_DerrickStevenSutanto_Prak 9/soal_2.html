@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2473038 - Derrick Steven Sutanto</title>
+    <script src="jquery-4.0.0.min.js"></script>
+
+    <style>
+        .nama {
+            margin-top: 5px;
+        }
+
+        .garisbawah {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="teks">
+    <button id="add">Add</button>
+    <button id="search">Search</button>
+
+    <div class="nama">John Resig</div>
+    <div class="nama">George Martin</div>
+    <div class="nama">Malcom John Sinclair</div>
+    <div class="nama">J. Ohn</div>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#add").click(function () {
+                let isi = $("#teks").val();
+
+                if (isi != "") {
+                    $("body").append("<div class='nama'>" + isi + "</div>");
+                    $("#teks").val("");
+                }
+            });
+
+            $("#search").click(function () {
+                let cari = $("#teks").val().toLowerCase();
+
+                $(".nama").removeClass("garisbawah");
+
+                $(".nama").each(function () {
+                    let nama = $(this).text().toLowerCase();
+
+                    if (nama.includes(cari) && cari != "") {
+                        $(this).addClass("garisbawah");
+                    }
+                });
+            });
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2473038 - Derrick Steven Sutanto</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        button{
+            margin-bottom: 15px;
+        }
+        .kotak {
+            width: 45px;
+            height: 45px;
+            border: 3px solid blue;
+            display: inline-block;
+            margin-right: 8px;
+            background: white;
+        }
+
+        .merah {
+            background: red;
+        }
+
+        .kuning {
+            background: yellow;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <button id="change">Change colors</button>
+        <br>
+
+        <div class="kotak"></div>
+        <div class="kotak"></div>
+        <div class="kotak"></div>
+        <div class="kotak"></div>
+        <div class="kotak"></div>
+        <div class="kotak"></div>
+        <div class="kotak"></div>
+        <div class="kotak"></div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $(".kotak").click(function () {
+                $(".kotak").removeClass("merah kuning");
+                $(this).addClass("merah");
+            });
+
+            $("#change").click(function () {
+                let ketemuMerah = false;
+
+                $(".kotak").each(function () {
+                    if ($(this).hasClass("merah")) {
+                        ketemuMerah = true;
+                    } else if (!ketemuMerah) {
+                        $(this).addClass("kuning");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
