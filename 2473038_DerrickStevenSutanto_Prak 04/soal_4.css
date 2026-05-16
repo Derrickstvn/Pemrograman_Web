@@ -1,0 +1,69 @@
+body {
+    background: #990000;
+    font-family: T;
+}
+
+.tabel {
+    border-collapse: collapse;
+}
+
+.tl, .tr, .bl, .br, .top, .bottom, .left, .right {
+    font-size: 0;
+    line-height: 0;
+    empty-cells: show;
+}
+
+.tl {
+    background: url(img/box_tl.gif) no-repeat;
+}
+
+.tr {
+    background: url(img/box_tr.gif) no-repeat;
+}
+
+.bl {
+    background: url(img/box_bl.gif) no-repeat;
+}
+
+.br {
+    background: url(img/box_br.gif) no-repeat;
+}
+
+.top {
+    background: url(img/box_t.gif) repeat-x;
+    height: 10px;
+}
+
+.bottom {
+    background: url(img/box_b.gif) repeat-x;
+    height: 20px;
+}
+
+.left {
+    background: url(img/box_l.gif) repeat-y;
+    width: 10px;
+}
+
+.right {
+    background: url(img/box_r.gif) repeat-y;
+    width: 20px;
+}
+
+.isi {
+    background: rgb(118, 3, 3);
+    color: white;
+    padding: 15px;
+    width: 200px;
+}
+
+.isi a {
+    color: yellow;
+    text-decoration: none;
+    display: block;     
+    text-align: right;   
+}
+
+.isi a:hover {
+    color: lime;
+    text-decoration: underline;
+}
