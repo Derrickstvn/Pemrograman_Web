@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2473038 - Derrick Steven Sutanto</title>
+    <link rel="stylesheet" href="soal_3.css">
+</head>
+
+<body>
+    <div>
+        <table>
+            <tr>
+                <td><label for="data">Data</label></td>
+                <td><input type="text" id="data"></td>
+            </tr>
+            <tr>
+                <td><button onclick="tambahData()">Add</button></td>
+                <td>
+                    <select id="pilihanOperasi" onchange="jalankanOperasi()">
+                        <option value="">Pilih Operasi</option>
+                        <option value="Display">Display</option>
+                        <option value="Count">Count</option>
+                        <option value="Sum">Sum</option>
+                        <option value="Average">Average</option>
+                        <option value="Max">Max</option>
+                        <option value="Min">Min</option>
+                        <option value="Ganjil">Ganjil</option>
+                        <option value="Genap">Genap</option>
+                        <option value="Hapus">Hapus</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="hasil">Hasil</label></td>
+                <td><input type="text" id="hasil" readonly></td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="soal_3.js"></script>
+</body>
+
+</html>
