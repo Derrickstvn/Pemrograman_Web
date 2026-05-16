@@ -1,0 +1,44 @@
+body {
+    padding: 50px;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    height: 200px;
+}
+
+img {
+    position: absolute;
+    width: 120px;
+}
+
+.ungu {
+    left: 140px;
+    top: 20px;
+    z-index: 2;
+}
+
+.kiri-atas {
+    left: 40px;
+    top: 20px;
+    z-index: 1;
+}
+
+.kiri-atas-setengah {
+    left: 40px;
+    top: 20px;
+    z-index: 3;
+}
+
+.kanan-atas {
+    left: 240px;
+    top: 20px;
+    z-index: 1;
+}
+
+.kanan-atas-setengah {
+    left: 240px;
+    top: 20px;
+    z-index: 3;
+}
