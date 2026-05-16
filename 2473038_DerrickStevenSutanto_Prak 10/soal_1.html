@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2473038 - Derrick Steven Sutanto</title>
+    <script src="jquery.js"></script>
+    <link rel="stylesheet" href="soal_1.css">
+</head>
+
+<body>
+    <div>
+        Selamat! Berikut adalah Daftar Mahasiswa yang mendapat <br>
+        Nilai A Pemrograman Web SI Tahun Ajaran 2023/2024
+    </div> <br>
+
+    <table>
+        <tr>
+            <td>
+                <input type="radio" name="kelas" value="nilai" checked>All <br>
+                <input type="radio" name="kelas" value="nilaiA">Kelas A <br>
+                <input type="radio" name="kelas" value="nilaiB">Kelas B <br>
+                <button>Search</button>
+            </td>
+        </tr>
+    </table> <br><br>
+
+    <table class="table-dua" id="tabelHasil">
+        <tr>
+            <th>NRP</th>
+            <th>NAMA</th>
+            <th>KELAS</th>
+            <th>NILAI AKHIR</th>
+        </tr>
+    </table>
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                let pilihan = $("input[name='kelas']:checked").val();
+
+                $.getJSON(pilihan + ".json", function (data) {
+                    $("#tabelHasil tr:gt(0)").remove();
+
+                    $.each(data.nilai, function (i, item) {
+                        let warna = "";
+
+                        if (i % 2 == 0) {
+                            warna = "#FFFFCC";
+                        } else {
+                            warna = "#CCFFAA";
+                        }
+
+                        $("#tabelHasil").append(
+                            `
+                            <tr bgcolor="${warna}">
+                                <td>${item.nrp}</td>
+                                <td>${item.nama}</td>
+                                <td>${item.kelas}</td>
+                                <td>${item.nilaiakhir}</td>
+                            </tr>
+                            `
+                        );
+                    });
+                }).fail(function () {
+                    alert("File " + pilihan + ".json tidak ditemukan!");
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

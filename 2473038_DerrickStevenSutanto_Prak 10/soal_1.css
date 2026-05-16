@@ -1,0 +1,25 @@
+div {
+    font-weight: bold;
+}
+
+table {
+    width: 300px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+th {
+    background-color: black;
+    color: white;
+}
+
+.table-dua {
+    border-collapse: collapse;
+    width: 400px;
+}
+
+.table-dua th,
+.table-dua td {
+    border: 1px solid black;
+    padding: 6px;
+}

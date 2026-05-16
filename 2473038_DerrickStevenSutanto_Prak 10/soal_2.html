@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 2 - Portal SI</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="soal_2.css">
+</head>
+
+<body>
+
+    <table border="1">
+        <tr>
+            <td id="judul">Title</td>
+        </tr>
+        <tr>
+            <td id="konten">Content</td>
+        </tr>
+        <tr>
+            <td id="pembuat">Generator</td>
+        </tr>
+    </table><br>
+
+    <button id="cari">Look</button>
+
+    <script>
+        $(document).ready(function () {
+            $("#cari").click(function () {
+
+                $.getJSON("SIJson.txt", function (data) {
+
+                    $("#judul").css("text-align", "center").html(`<a href="${data.link}"><b>${data.title}</b></a>`);
+
+                    $("#pembuat").html(`&copy;${data.generator}`);
+
+                    $("#konten").empty();
+
+                    $.each(data.items, function (i, item) {
+                        let susunanItem = `
+                            <div class="item-kuliah">
+                                <a href="${item.link}"><b>${item.title}</b></a><br>
+                                <span class="item-meta">By : ${item.author} / ${item.published}</span>
+                                <p class="item-desc">${item.description}</p>
+                                Universitas : <a href="${item.universitas.m}">Click Here</a><br>
+                                Tag(s) : ${item.tags}
+                            </div>
+                        `;
+
+                        $("#konten").append(susunanItem);
+                    });
+
+                }).fail(function () {
+                    alert("Gagal memuat file SIJson.txt! Pastikan file berada di folder yang sama.");
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
