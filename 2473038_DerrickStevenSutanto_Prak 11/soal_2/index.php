@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Data Siswa</title>
+    <title>2473038 - Derrick Steven Sutanto</title>
     <style>
         table { 
             width: 100%; 

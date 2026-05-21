@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Proses Login</title>
+    <title>2473038 - Derrick Steven Sutanto</title>
     <style>
         .pesan-berhasil {
             font-size: 24px;
